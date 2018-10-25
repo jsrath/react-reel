@@ -1,0 +1,11 @@
+.movie-img-fit {
+  object-fit: fill;
+  height: 300px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.movie-video-fit {
+  object-fit: fill;
+  width: 100%;
+}
