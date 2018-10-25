@@ -40,7 +40,7 @@ class MainNav extends Component {
             <NavbarNav right className="mx-4">
               <NavLink to="/">
                 <NavItem className="text-white" onClick={this.props.logOut}>
-                  <Fa icon="lock" /> Logout
+                  <Fa className="pr-1" icon="lock" /> Logout
                 </NavItem>
               </NavLink>
             </NavbarNav>
