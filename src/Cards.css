@@ -7,3 +7,12 @@ div:focus {
   height: 150px;
   width: 100%;
 }
+
+@media screen and (max-width: 767px) {
+  .navbar .nav-item .nav-link {
+    margin-left: 10px;
+  }
+  #logout {
+    margin-left: 20px;
+  }
+}
