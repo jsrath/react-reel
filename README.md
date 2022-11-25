@@ -6,4 +6,4 @@ The frontend can be navigated using the keyboard to simulate a TV without mouse 
 
 Built in React.
 
-A live version can be seen at: [https://reactreel.herokuapp.com/](https://reactreel.herokuapp.com/)
+A live version can be seen at: [https://react-reel.onrender.com/](https://react-reel.onrender.com/)
