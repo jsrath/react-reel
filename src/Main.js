@@ -4,6 +4,7 @@ import Login from './Login';
 import MainNav from './MainNav';
 import Cards from './Cards';
 import Individual from './Individual';
+import { fetchCatalog } from './api';
 
 class Main extends Component {
   constructor(props) {
@@ -33,19 +34,7 @@ class Main extends Component {
   };
 
   getData = () => {
-    Promise.all([
-      fetch('https://react-rent.herokuapp.com/api/movie', {
-        headers: new Headers({
-          'X-SimpleOvpApi': 'USER_KEY_2',
-        }),
-      }),
-      fetch('https://react-rent.herokuapp.com/api/serie', {
-        headers: new Headers({
-          'X-SimpleOvpApi': 'USER_KEY_2',
-        }),
-      }),
-    ])
-      .then(([movies, series]) => Promise.all([movies.json(), series.json()]))
+    fetchCatalog()
       .then(([movies, series]) =>
         this.setState({
           movies: [...movies.items],
@@ -53,7 +42,8 @@ class Main extends Component {
           all: [...movies.items, ...series.items],
           loaded: true,
         }),
-      );
+      )
+      .catch(() => this.setState({ loaded: true }));
   };
 
   componentDidMount() {

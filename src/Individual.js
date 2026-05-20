@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardImage, CardTitle, CardText, Fa } from 'mdbreact';
 import './Individual.css';
+import { fetchCatalog, mediaUrl } from './api';
 
 class Individual extends Component {
   checkLogin() {
@@ -17,24 +18,11 @@ class Individual extends Component {
   }
 
   componentDidMount() {
-    Promise.all([
-      fetch('https://react-rent.herokuapp.com/api/movie', {
-        headers: new Headers({
-          'X-SimpleOvpApi': 'USER_KEY_2',
-        }),
+    fetchCatalog().then(([movies, series]) =>
+      this.setState({
+        Individual: [...movies.items, ...series.items],
       }),
-      fetch('https://react-rent.herokuapp.com/api/serie', {
-        headers: new Headers({
-          'X-SimpleOvpApi': 'USER_KEY_2',
-        }),
-      }),
-    ])
-      .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
-      .then(([movies, series]) =>
-        this.setState({
-          Individual: [...movies.items, ...series.items],
-        }),
-      );
+    );
   }
 
   render() {
@@ -45,7 +33,7 @@ class Individual extends Component {
             if (parseInt(this.props.match.params.id, 10) === title.id) {
               return (
                 <Card key={title.id}>
-                  <CardImage className="img-fluid movie-img-fit" src={`https://react-rent.herokuapp.com/${title.imageSrc}`} />
+                  <CardImage className="img-fluid movie-img-fit" src={mediaUrl(title.imageSrc)} />
                   <CardBody>
                     <CardTitle>{title.title}</CardTitle>
                     <hr />
@@ -74,7 +62,7 @@ class Individual extends Component {
                     <hr />
                     <h5 className="mt-4">Watch</h5>
                     <hr />
-                    <video className="video-fluid z-depth-1 movie-video-fit" loop controls poster={`https://react-rent.herokuapp.com/${title.imageSrc}`}>
+                    <video className="video-fluid z-depth-1 movie-video-fit" loop controls poster={mediaUrl(title.imageSrc)}>
                       <source src={title.videoSrc} type="video/mp4" />
                     </video>
                   </CardBody>

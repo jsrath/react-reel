@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Card, CardBody, CardImage, CardTitle, CardText, Container, Fa, Row } from 'mdbreact';
 import './Cards.css';
 import { Link } from 'react-router-dom';
+import { mediaUrl } from './api';
 
 class Cards extends Component {
   keyDown = event => {
@@ -65,7 +66,7 @@ class Cards extends Component {
               <div className="col-md-4 mt-4 d-flex align-items-stretch" key={movie.id}>
                 <Card tabIndex="0">
                   <Link to={`/titles/${movie.id}`}>
-                    <CardImage className="img-fluid img-fit" src={`https://react-rent.herokuapp.com/${movie.imageSrc}`} />
+                    <CardImage className="img-fluid img-fit" src={mediaUrl(movie.imageSrc)} />
                   </Link>
                   <CardBody>
                     <Link to={`/titles/${movie.id}`}>

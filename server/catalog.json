@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Big Buck Bunny",
+    "description": "A large-hearted rabbit helps three bullying rodents see the error of their ways.",
+    "type": "movie",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/440px-Big_buck_bunny_poster_big.jpg",
+    "genre": "Animation",
+    "rating": "8.2",
+    "releaseDate": "2008",
+    "length": "10 min",
+    "videoSrc": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "id": 2,
+    "title": "Elephant Dream",
+    "description": "Two men explore a surreal mechanical world and question what is real.",
+    "type": "movie",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Elephants_Dream_s1_proog.jpg/440px-Elephants_Dream_s1_proog.jpg",
+    "genre": "Sci-Fi",
+    "rating": "7.4",
+    "releaseDate": "2006",
+    "length": "11 min",
+    "videoSrc": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+  },
+  {
+    "id": 3,
+    "title": "Sintel",
+    "description": "A young woman searches for a baby dragon she raised after it is taken from her.",
+    "type": "movie",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sintel_poster.jpg/440px-Sintel_poster.jpg",
+    "genre": "Fantasy",
+    "rating": "7.8",
+    "releaseDate": "2010",
+    "length": "15 min",
+    "videoSrc": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+  },
+  {
+    "id": 4,
+    "title": "Tears of Steel",
+    "description": "A small team tries to repair a broken relationship between humans and robots.",
+    "type": "movie",
+    "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Tears_of_Steel_poster.jpg/440px-Tears_of_Steel_poster.jpg",
+    "genre": "Sci-Fi",
+    "rating": "7.1",
+    "releaseDate": "2012",
+    "length": "12 min",
+    "videoSrc": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+  },
+  {
+    "id": 5,
+    "title": "For Bigger Blazes",
+    "description": "A short demo clip showcasing vivid fire and outdoor footage.",
+    "type": "serie",
+    "imageSrc": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+    "genre": "Documentary",
+    "rating": "7.0",
+    "releaseDate": "2015",
+    "length": "15 sec",
+    "videoSrc": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+  },
+  {
+    "id": 6,
+    "title": "For Bigger Escape",
+    "description": "A short action-style demo clip built for streaming tests.",
+    "type": "serie",
+    "imageSrc": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg",
+    "genre": "Action",
+    "rating": "7.3",
+    "releaseDate": "2015",
+    "length": "15 sec",
+    "videoSrc": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+  }
+]
